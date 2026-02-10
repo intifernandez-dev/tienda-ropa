@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Prenda - Tienda de Ropa</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-shop"></i> Tienda de Ropa
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="bi bi-house-door"></i> Inicio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="listar.php">
+                            <i class="bi bi-list-ul"></i> Ver Inventario
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="agregar.html">
+                            <i class="bi bi-plus-circle"></i> Agregar Prenda
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div class="container mt-4">
+        <div class="main-container">
+            <div class="page-header">
+                <h1><i class="bi bi-plus-circle"></i> Agregar Nueva Prenda</h1>
+                <p class="text-muted">Completa el formulario para agregar una prenda al inventario</p>
+            </div>
+
+            <div class="form-container">
+                <form method="POST" action="agregar.php" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="prenda">
+                            <i class="bi bi-tag"></i> Tipo de Prenda
+                        </label>
+                        <input type="text" 
+                               class="form-control" 
+                               id="prenda" 
+                               name="prenda" 
+                               placeholder="Ej: Buzo, Remera, Pantalón" 
+                               required>
+                        <small class="form-text text-muted">Indica el tipo de prenda (buzo, remera, campera, etc.)</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="marca">
+                            <i class="bi bi-award"></i> Marca
+                        </label>
+                        <input type="text" 
+                               class="form-control" 
+                               id="marca" 
+                               name="marca" 
+                               placeholder="Ej: Nike, Adidas, Puma" 
+                               required>
+                        <small class="form-text text-muted">Marca de la prenda</small>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="talle">
+                                    <i class="bi bi-rulers"></i> Talle
+                                </label>
+                                <select class="form-select" id="talle" name="talle" required>
+                                    <option value="">Seleccione un talle</option>
+                                    <option value="XS">XS</option>
+                                    <option value="S">S</option>
+                                    <option value="M">M</option>
+                                    <option value="L">L</option>
+                                    <option value="XL">XL</option>
+                                    <option value="XXL">XXL</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="precio">
+                                    <i class="bi bi-currency-dollar"></i> Precio
+                                </label>
+                                <input type="number" 
+                                       class="form-control" 
+                                       id="precio" 
+                                       name="precio" 
+                                       placeholder="0.00" 
+                                       step="0.01" 
+                                       min="0" 
+                                       required>
+                                <small class="form-text text-muted">Precio en pesos</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="imagen">
+                            <i class="bi bi-image"></i> Imagen de la Prenda
+                        </label>
+                        <input type="file" 
+                               class="form-control" 
+                               id="imagen" 
+                               name="imagen" 
+                               accept="image/jpeg,image/png,image/jpg,image/webp"
+                               onchange="previewImage(event)">
+                        <small class="form-text text-muted">Formatos permitidos: JPG, PNG, WEBP (máx. 2MB)</small>
+                    </div>
+
+                    <!-- Preview de la imagen -->
+                    <div id="imagePreview" class="imagen-preview" style="display: none;">
+                        <strong>Vista previa:</strong><br>
+                        <img id="preview" src="" alt="Preview" style="max-width: 200px; max-height: 200px; margin-top: 10px;">
+                    </div>
+
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-4">
+                        <a href="index.html" class="btn btn-secondary">
+                            <i class="bi bi-x-circle"></i> Cancelar
+                        </a>
+                        <button type="submit" class="btn btn-success">
+                            <i class="bi bi-check-circle"></i> Guardar Prenda
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Preview de imagen antes de subir
+        function previewImage(event) {
+            const file = event.target.files[0];
+            const preview = document.getElementById('preview');
+            const previewContainer = document.getElementById('imagePreview');
+            
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    preview.src = e.target.result;
+                    previewContainer.style.display = 'block';
+                }
+                reader.readAsDataURL(file);
+            } else {
+                previewContainer.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

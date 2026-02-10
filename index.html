@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Ropa - Inicio</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-shop"></i> Tienda de Ropa
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">
+                            <i class="bi bi-house-door"></i> Inicio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="listar.php">
+                            <i class="bi bi-list-ul"></i> Ver Inventario
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="agregar.html">
+                            <i class="bi bi-plus-circle"></i> Agregar Prenda
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div class="container mt-5">
+        <div class="main-container">
+            <div class="welcome-section">
+                <h1><i class="bi bi-shop-window"></i> Bienvenido al Sistema de Gestión</h1>
+                <p class="lead">Administra tu inventario de ropa de forma simple y eficiente</p>
+                
+                <div class="row mt-5">
+                    <div class="col-md-4">
+                        <div class="card text-center mb-4">
+                            <div class="card-body">
+                                <i class="bi bi-list-ul" style="font-size: 3rem; color: #0d6efd;"></i>
+                                <h5 class="card-title mt-3">Ver Inventario</h5>
+                                <p class="card-text">Consulta todas las prendas disponibles en el stock</p>
+                                <a href="listar.php" class="btn btn-primary">
+                                    <i class="bi bi-eye"></i> Ver Listado
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="card text-center mb-4">
+                            <div class="card-body">
+                                <i class="bi bi-plus-circle" style="font-size: 3rem; color: #198754;"></i>
+                                <h5 class="card-title mt-3">Agregar Prenda</h5>
+                                <p class="card-text">Ingresa nuevas prendas al inventario</p>
+                                <a href="agregar.html" class="btn btn-success">
+                                    <i class="bi bi-plus"></i> Agregar Nueva
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="card text-center mb-4">
+                            <div class="card-body">
+                                <i class="bi bi-gear" style="font-size: 3rem; color: #6c757d;"></i>
+                                <h5 class="card-title mt-3">Gestionar</h5>
+                                <p class="card-text">Edita o elimina prendas existentes</p>
+                                <a href="listar.php" class="btn btn-secondary">
+                                    <i class="bi bi-pencil-square"></i> Administrar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <p class="mb-0">Sistema de Gestión de Inventario - Tienda de Ropa</p>
+            <small class="text-muted">Desarrollado con PHP, MySQL y Bootstrap</small>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
