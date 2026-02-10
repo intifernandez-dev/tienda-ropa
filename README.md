@@ -256,10 +256,6 @@ Este es un proyecto educativo, pero si encuentras mejoras o bugs, siéntete libr
 
 ## 📄 Licencia
 
-Este proyecto fue desarrollado con fines educativos en el CMFP "Ricardo Rojas" - Morón, Buenos Aires.
-
----
-
 Desarrollado por: Inti Fernandez
 Curso: Programación Web - Programación Backend Developer
 Programa: Potrero Digital (Fundación Compromiso)
