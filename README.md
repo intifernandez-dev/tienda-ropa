@@ -256,9 +256,9 @@ Este es un proyecto educativo, pero si encuentras mejoras o bugs, siéntete libr
 
 ## 📄 Licencia
 
-Desarrollado por: Inti Fernandez
-Curso: Programación Web - Programación Backend Developer
-Programa: Potrero Digital (Fundación Compromiso)
-Año: 2025
+Desarrollado por **Inti Fernandez**  
+Curso: **Programación Web – Programación Backend Developer**  
+Programa: **Potrero Digital (Fundación Compromiso)**  
+Año: **2025**
 
 **⭐ Si este proyecto te fue útil, no olvides darle una estrella en GitHub!**
