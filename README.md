@@ -8,8 +8,9 @@ Sistema CRUD (Create, Read, Update, Delete) completo desarrollado en PHP y MySQL
 
 ## 📋 Descripción
 
-Proyecto desarrollado durante el curso de PHP/MySQL en el CMFP "Ricardo Rojas". Permite administrar un inventario de prendas de ropa con las siguientes funcionalidades:
+Proyecto desarrollado durante el curso de PHP/MySQL en el curso de **"Programación Web - Programación Backend Developer" de Potrero Digital (Fundación Compromiso)**. Permite administrar un inventario de prendas de ropa con las siguientes funcionalidades:
 
+Programación Web – Programación Backend Developer
 - ✅ **Agregar** nuevas prendas con imágenes
 - 📋 **Listar** todas las prendas del inventario
 - ✏️ **Modificar** información de prendas existentes
@@ -254,11 +255,15 @@ Este es un proyecto educativo, pero si encuentras mejoras o bugs, siéntete libr
 - Enviar un Pull Request
 - Sugerir nuevas funcionalidades
 
-## 📄 Licencia
+## 👨‍💻 Autor
 
 Desarrollado por **Inti Fernandez**  
 Curso: **Programación Web – Programación Backend Developer**  
 Programa: **Potrero Digital (Fundación Compromiso)**  
 Año: **2025**
+
+- GitHub: (https://github.com/intifernandez-dev)
+- Email: intifernandez.dev@gmail.com
+
 
 **⭐ Si este proyecto te fue útil, no olvides darle una estrella en GitHub!**
